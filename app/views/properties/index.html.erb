@@ -1,0 +1,18 @@
+<h1>Properties</h1>
+
+<table style="width:50%">
+  <tr>
+    <th>Address</th>
+    <th>Postcode</th>
+    <th>Price(£)</th>
+    <th>Type</th>
+  </tr>
+  <% @properties.each do |property| %>
+    <tr>
+      <td><%= property.ADDRESS %></td>
+      <td><%= property.POSTCODE %></td>
+      <td><%= property.PRICE %></td>
+      <td><%= property.BEDROOMS %> bed <%= property.TYPE %></td>
+    </tr>
+  <% end %>
+</table>

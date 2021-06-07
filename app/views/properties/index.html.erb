@@ -1,5 +1,5 @@
 <%= javascript_pack_tag 'index' %>
-<h1>Properties</h1>
+<h1>Properties <%= current_user.username %></h1>
 
 <table style="width:50%">
   <tr>
@@ -17,14 +17,3 @@
     </tr>
   <% end %>
 </table>
-
-<label for="postcodes">Choose a postcode:</label>
-
-<select name="postcodes" id="postcodes">
-  <% postcodes = %>
-  <% @properties.each do |property| %>
-    <option value=<%= property.POSTCODE[0..3] %>><%= property.POSTCODE[0..3] %></option>
-  <% end %>
-</select>
-
-<canvas id="myChart" width="960" height="200"></canvas>
